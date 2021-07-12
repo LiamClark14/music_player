@@ -38,7 +38,7 @@ let track_list = [
     name: "In The Air",
     artist: "Juice Wrld",
     image: "https://tse2.mm.bing.net/th?id=OIP.m0bApeh9eGrs7DopM-wFNQHaHa&pid=Api&P=0&w=300&h=300",
-    path: "in_the_air.mp3",
+    path: "audio/in_the_air.mp3",
   },
 ];
 
@@ -66,24 +66,8 @@ function loadTrack(track_index) {
   // Move to the next track if the current finishes playing
   // using the 'ended' event
   curr_track.addEventListener("ended", nextTrack);
-
-  // Apply a random background color
-  random_bg_color();
 }
 
-function random_bg_color() {
-  // Get a random number between 64 to 256
-  // (for getting lighter colors)
-  let red = Math.floor(Math.random() * 256) + 64;
-  let green = Math.floor(Math.random() * 256) + 64;
-  let blue = Math.floor(Math.random() * 256) + 64;
-
-  // Construct a color withe the given values
-  let bgColor = "rgb(" + red + ", " + green + ", " + blue + ")";
-
-  // Set the background to the new color
-  document.body.style.background = bgColor;
-}
 
 // Function to reset all values to their default
 function resetValues() {

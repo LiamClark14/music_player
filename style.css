@@ -1,8 +1,17 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+body {
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(90deg, purple,gold);
  
   /* Smoothly transition the background color */
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .backgroundAnimated{
@@ -27,7 +36,7 @@ animation-iteration-count: 2;
 /* Using flex with the column direction to
    align items in a vertical direction */
 .player {
-  height: 95vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   flex-direction: column;
