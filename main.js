@@ -6,6 +6,8 @@ let track_artist = document.querySelector(".track-artist");
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
 let prev_btn = document.querySelector(".prev-track");
+let uzi_btn = document.querySelector(".lil-uzi");
+let juice_btn = document.querySelector(".juice");
 
 let seek_slider = document.querySelector(".seek_slider");
 let volume_slider = document.querySelector(".volume_slider");
@@ -21,7 +23,9 @@ let updateTimer;
 let curr_track = document.createElement('audio');
 
 // Define the list of tracks that have to be played
-let track_list = [
+let track_list = []
+
+let juice_track_list = [
   {
     name: "Purple Moncler",
     artist: "Juice Wrld",
@@ -41,6 +45,35 @@ let track_list = [
     path: "audio/in_the_air.mp3",
   },
 ];
+
+let uzi_track_list = [{
+  name: "Buy It",
+  artist: "Lil Uzi Vert",
+  image: "https://th.bing.com/th/id/OIP._J8aTsOqQU-UbMhL4xoeLQHaEK?w=311&h=180&c=7&o=5&pid=1.7",
+  path: "audio/buy_it.mp3",
+}];
+
+track_list = juice_track_list;
+
+function changeTrackToUzi() {
+  track_list = uzi_track_list;
+  loadTrack(0);
+  playTrack();
+}
+
+function changeTrackToJuice() {
+  track_list = juice_track_list;
+  loadTrack(0);
+  playTrack();
+}
+
+
+
+uzi_btn.addEventListener('click', changeTrackToUzi);
+
+juice_btn.addEventListener('click', changeTrackToJuice);
+
+
 
 function loadTrack(track_index) {
   // Clear the previous seek timer
