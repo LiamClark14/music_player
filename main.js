@@ -23,7 +23,8 @@ let updateTimer;
 let curr_track = document.createElement('audio');
 
 // Define the list of tracks that have to be played
-let track_list = []
+
+let track_list = [];
 
 let juice_track_list = [
   {
@@ -44,6 +45,12 @@ let juice_track_list = [
     image: "https://tse2.mm.bing.net/th?id=OIP.m0bApeh9eGrs7DopM-wFNQHaHa&pid=Api&P=0&w=300&h=300",
     path: "audio/in_the_air.mp3",
   },
+  {
+    name: "All Girls Are The Same",
+    artist: "Juice Wrld",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Oj57-gLXbMjU42gPGRQqSDxOzfejTFW_fQ&usqp=CAU",
+    path: "audio/all_girls_are_the_same.mp3",
+  }
 ];
 
 let uzi_track_list = [{
@@ -54,6 +61,7 @@ let uzi_track_list = [{
 }];
 
 track_list = juice_track_list;
+
 
 function changeTrackToUzi() {
   track_list = uzi_track_list;
