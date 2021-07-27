@@ -54,6 +54,18 @@ let juice_track_list = [
 ];
 
 let uzi_track_list = [{
+  name: "Movie",
+  artist: "Lil Uzi Vert",
+  image: "track_art/movie.png",
+  path: "audio/movie.mp3"
+},
+{
+  name: "3 Pillz",
+  artist: "Lil Uzi Vert",
+  image: "track_art/3_pillz.png",
+  path: "audio/3_pillz.mp3"
+},
+{
   name: "Harden",
   artist: "Lil Uzi Vert",
   image: "track_art/harden.png",
